@@ -3,6 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -12,4 +13,32 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.2;
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    padding: var(--page-padding);
+    min-height: 100vh;
+
+    background-image: url('/assets/images/grid.svg');
+    background-position: 100% 40%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
 }

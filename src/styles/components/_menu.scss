@@ -1,0 +1,98 @@
+.menu {
+    .menu__button {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: var(--page-padding);
+        right: var(--page-padding);
+        cursor: pointer;
+        z-index: 100;
+        .menu__button-icon {
+            width: 40px;
+            height: 40px;
+            order: 1;
+            rect {
+                transition: fill .3s ease-in-out;
+            }
+        }
+        .menu__button-text {
+            font-weight: 500;
+            order: 0;
+            margin-right: 1.3rem;
+            transition: color .2s ease-in-out;
+        }
+
+        &:hover {
+            .menu__button-icon {
+                rect {
+                    fill: var(--highlight-color)
+                }
+            }
+            .menu__button-text {
+                color: var(--highlight-color);
+            }
+        }
+    }
+
+    .menu__nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        min-height: 100vh; // Define the dimensions on the wrapper, the child should then take the height: 100%, width: 100%
+        min-width: 30vw;
+        .menu__nav-layer {
+            height: 100%;
+            width: 100%;
+            position: absolute; // Since they will all stack they should have an absolute position
+            top: 0;
+            left: 0;
+        }
+        .menu__nav-layer1 {
+            background: var(--text-color);
+            z-index: 0;
+        }
+        .menu__nav-layer2 {
+            background: var(--highlight-color);
+            z-index: 1;
+        }
+        .menu__nav-layer3 {
+            background: var(--background-color);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--page-padding);
+        }
+
+        .menu__nav-listing {
+            list-style: none;
+            li {
+                font-weight: 500;
+                transition: color .2s ease-in-out;
+                cursor: pointer;
+                &:not(:last-of-type){
+                    margin-bottom: .7rem;
+                }
+                &:hover {
+                    color: var(--highlight-color);
+                }
+            }
+
+            &:first-of-type {
+                position: relative;
+                top: -50px;
+                li {
+                    font-size: 4.8rem;
+                }
+            }
+
+            &:last-of-type {
+                position: absolute;
+                bottom: 50px;
+                li {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}

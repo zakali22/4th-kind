@@ -1,0 +1,30 @@
+.dark-mode {
+    position: fixed;
+    bottom: calc(var(--page-padding) + 20px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color .3s ease;
+    &:hover {
+        color: var(--highlight-color);
+        .dark-mode__control {
+            circle:not([fill-opacity]){
+                fill: var(--highlight-color);
+                transform: scale(1.8);
+            }
+        }
+    }
+    .dark-mode__control {
+        width: 60px;
+        height: 40px;
+        fill: none;
+        circle {
+            transform-origin: 28% 50%;
+            transition: fill .3s ease, transform .3s ease;
+        }
+    }
+
+    .dark-mode__text {
+        margin-left: 1rem;
+    }
+}
