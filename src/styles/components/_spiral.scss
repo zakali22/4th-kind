@@ -1,0 +1,19 @@
+.spiral {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--highlight-color);
+    width: 580px;
+    height: 580px;
+
+    rect {
+        stroke: var(--highlight-color);
+        fill: transparent; // To give it some area
+        fill-opacity: .3;
+        &:hover {
+            fill: var(--highlight-color)
+        }
+    }
+    
+}

@@ -17,6 +17,7 @@ body {
     font-family: var(--primary-font);
     padding: var(--page-padding);
     min-height: 100vh;
+    position: relative;
 
     background-image: url('/assets/images/grid.svg');
     background-position: 100% 40%;
@@ -54,4 +55,28 @@ h3 {
     // height: 100vh;
     width: 100%;
     z-index: 101;
+}
+
+.mouse {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    .mouse__dot {
+        transform: translateY(50%);
+        animation: upDown 1s ease infinite alternate
+    }
+    path {
+        fill: var(--text-color)
+    }
+}
+
+// Keyframes 
+@keyframes upDown {
+    0% {
+        transform: translateY(50%)
+    }
+    100% {
+        transform: translateY(30%)
+    }
 }
