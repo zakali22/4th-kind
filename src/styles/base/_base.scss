@@ -20,6 +20,7 @@ body {
 
     background-image: url('/assets/images/grid.svg');
     background-position: 100% 40%;
+    background-color: var(--background-color);
 }
 
 img {
@@ -41,4 +42,16 @@ h2 {
 h3 {
     font-size: 2.4rem;
     font-weight: 400;
+}
+
+
+.slide-transition {
+    position: fixed;
+    left: 0px; 
+    right: 0px; 
+    top: 0;
+    background-color: var(--highlight-color);
+    // height: 100vh;
+    width: 100%;
+    z-index: 101;
 }

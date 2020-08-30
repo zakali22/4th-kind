@@ -8,9 +8,19 @@
     &:hover {
         color: var(--highlight-color);
         .dark-mode__control {
-            circle:not([fill-opacity]){
+            circle {
                 fill: var(--highlight-color);
+            }
+            circle:not([fill-opacity]){
                 transform: scale(1.8);
+            }
+            rect {
+                stroke: var(--highlight-color)
+            }
+            &.slideControl {
+                circle:not([fill-opacity]){
+                    transform: translateX(35%) scale(1.8);
+                }
             }
         }
     }
@@ -20,7 +30,17 @@
         fill: none;
         circle {
             transform-origin: 28% 50%;
-            transition: fill .3s ease, transform .3s ease;
+            transition: fill .8s ease, transform .8s ease;
+            fill: var(--text-color)
+        }
+        rect {
+            stroke: var(--text-color)
+        }
+
+        &.slideControl {
+            circle:not([fill-opacity]){
+                transform: translateX(35%);
+            }
         }
     }
 
