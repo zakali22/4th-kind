@@ -20,7 +20,6 @@ darkModeWrapper.addEventListener('click', () => {
         .set(slideTransitionEl, {y: 0, height: 0})
 
     if(colorMode === '"light"'){
-        console.log(colorMode)
         colors = {
             textColor: '#ffffff',
             backgroundColor: '#000000',
@@ -37,7 +36,6 @@ darkModeWrapper.addEventListener('click', () => {
         darkModeControl.classList.add('slideControl')
 
     } else {
-        console.log(colorMode)
         colors = {
             textColor: '#000000',
             backgroundColor: '#ffffff',
@@ -58,7 +56,6 @@ darkModeWrapper.addEventListener('click', () => {
 
 
 const changeVariables = function(mode){
-    console.log("Called function")
     if(mode === 'light'){
         document.documentElement.style.setProperty('--text-color', colors['textColor'])
         document.documentElement.style.setProperty('--background-color', colors['backgroundColor'])
