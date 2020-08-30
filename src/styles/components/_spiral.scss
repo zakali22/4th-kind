@@ -4,16 +4,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid var(--highlight-color);
-    width: 580px;
-    height: 580px;
+    width: 544px;
+    height: 544px;
+    max-width: 544px;
+    max-height: 544px;
 
+    g {
+        transition: transform 0.5s, opacity 0.5s;
+        transform-box: fill-box;
+        transform-origin: center center;
+    }
+    
     rect {
         stroke: var(--highlight-color);
+        stroke-width: 2px;
         fill: transparent; // To give it some area
         fill-opacity: .3;
         &:hover {
             fill: var(--highlight-color)
         }
+        transform-box: fill-box;
+        transform-origin: center center;
+        transition: transform 10s ease;
+        // animation: rotate 3s infinite cubic-bezier(0.46,0.03,0.52,0.96)
     }
     
+}
+
+
+// Keyframes
+@keyframes rotate {
+    0% {
+        transform:  rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(180deg)
+    }
 }
