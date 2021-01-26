@@ -6,7 +6,7 @@
         margin-right: 2rem;
         width: 40px;
         height: 40px;
-        animation: rotateLogo 3s 1s ease-in-out infinite both;
+        animation: rotateLogo 70s ease infinite both;
         rect {
             fill: var(--highlight-color)
         }
@@ -14,5 +14,16 @@
 
     .logo__title {
         font-size: 2.3rem;
+    }
+}
+
+
+// Logo Rotation animation
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(#{100*15}deg);
     }
 }

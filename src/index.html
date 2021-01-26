@@ -6,6 +6,7 @@
     <title>4th Kind - GSAP/Dark Mode</title>
 </head>
 <body>
+    <div class="slide-transition"></div>
     <div class="logo">
         <svg class="logo__box" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
             <rect x="11.5146" y="5.30304" width="24" height="24" transform="rotate(15 11.5146 5.30304)" fill="#C4C4C4"/>
@@ -15,9 +16,9 @@
     <div class="dark-mode">
         <svg class="dark-mode__control" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
             <rect x="8" y="9" width="46" height="22" rx="11" stroke="black" stroke-width="2"/>
-            <circle cx="19" cy="20" r="6" fill="black" fill-opacity="0.5"/>
-            <circle cx="19" cy="20" r="6" fill="black"/>
-            <circle cx="43" cy="20" r="6" fill="black" fill-opacity="0.5"/>
+            <circle cx="19" cy="20" r="6" fill-opacity="0.5"/>
+            <circle cx="19" cy="20" r="6"/>
+            <circle cx="43" cy="20" r="6" fill-opacity="0.5"/>
         </svg>
         <h3 class="dark-mode__text">Dark mode</h3>
     </div>
@@ -25,9 +26,9 @@
     <div class="menu">
         <div class="menu__button">
             <svg class="menu__button-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="18" width="28" height="4" fill="black"/>
-                <rect x="6" y="10" width="28" height="4" fill="black"/>
-                <rect x="6" y="26" width="28" height="4" fill="black"/>
+                <rect x="6" y="18" width="28" height="4"/>
+                <rect x="6" y="10" width="28" height="4"/>
+                <rect x="6" y="26" width="28" height="4"/>
             </svg>
             <h3 class="menu__button-text">Menu</h3>
         </div>
@@ -48,5 +49,32 @@
             </div>
         </nav>
     </div>
+
+    <svg class="spiral" viewBox="0 0 544 544" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(45, -70) rotate(-15)">
+            <rect x="18.4778" y="125.629" width="414" height="414"  />
+        </g>
+        <g transform="translate(-5, 0)">
+            <rect x="129" y="129" width="289" height="289" />
+        </g>
+        <g transform="translate(-20, 15) rotate(15)">
+            <rect x="216.139" y="175.245" width="158" height="158" />
+        </g>
+        <g transform="translate(0, 0)">
+            <rect x="257" y="257" width="30" height="30" />
+        </g>
+    </svg>
+
+    <svg class="mouse" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" height="50"
+    viewBox="0 0 275.07 275.07" style="enable-background:new 0 0 275.07 275.07;" xml:space="preserve">
+        <g>
+            <path class="mouse__dot" d="M137.536,44.17c-7.221,0-13.096,5.875-13.096,13.096c0,7.222,5.875,13.098,13.096,13.098
+                c7.221,0,13.096-5.876,13.096-13.098C150.632,50.045,144.757,44.17,137.536,44.17z"/>
+            <path d="M137.535,0C94.098,0,58.759,39.148,58.759,87.268v100.535c0,48.119,35.339,87.268,78.776,87.268
+                s78.776-39.148,78.776-87.268V87.268C216.312,39.148,180.973,0,137.535,0z M201.312,187.803c0,39.849-28.61,72.268-63.776,72.268
+                c-35.167,0-63.776-32.419-63.776-72.268V87.268c0-39.849,28.61-72.268,63.776-72.268c35.166,0,63.776,32.419,63.776,72.268V187.803
+                z"/>
+        </g>
+    </svg>
 </body>
 </html>

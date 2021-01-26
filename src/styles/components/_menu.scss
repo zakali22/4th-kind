@@ -12,7 +12,8 @@
             height: 40px;
             order: 1;
             rect {
-                transition: fill .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                fill: var(--text-color)
             }
         }
         .menu__button-text {
@@ -29,7 +30,27 @@
                 }
             }
             .menu__button-text {
+                outline: none;
                 color: var(--highlight-color);
+            }
+        }
+
+        &.showNav {
+            .menu__button-icon {
+                rect {
+                    &:nth-of-type(1){
+                        opacity: 0;
+                    }
+                    &:nth-of-type(2){
+                        transform: translate(12px, -2px) rotate(48deg);
+                    }
+                    &:nth-of-type(3){
+                        transform: translate(-18px, 17px) rotate(-49deg);
+                    }
+                }
+            }
+            .menu__button-text {
+                margin-right: 1rem;
             }
         }
     }
@@ -45,7 +66,7 @@
             width: 100%;
             position: absolute; // Since they will all stack they should have an absolute position
             top: 0;
-            left: 0;
+            transform: translateX(100%)
         }
         .menu__nav-layer1 {
             background: var(--text-color);
@@ -94,5 +115,35 @@
                 }
             }
         }
+        /* CSS Animations */
+
+        // &.hideNav {
+        //     .menu__nav-layer {
+        //         right: -100%;
+        //     }
+        //     .menu__nav-layer1 {
+        //         transition: right .5s .2s ease;
+        //     }
+        //     .menu__nav-layer2 {
+        //         transition: right .5s .1s ease;
+        //     }
+        //     .menu__nav-layer3 {
+        //         transition: right .5s 0s ease;
+        //     }
+        // }
+        // &.showNav {
+        //     .menu__nav-layer { 
+        //         right: 0;
+        //     }
+        //     .menu__nav-layer1 {
+        //         transition: right .5s 0s ease;
+        //     }
+        //     .menu__nav-layer2 {
+        //         transition: right .5s .1s ease;
+        //     }
+        //     .menu__nav-layer3 {
+        //         transition: right .5s .2s ease;
+        //     }
+        // }
     }
 }
